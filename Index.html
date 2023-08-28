@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="./img/icons8-dinero-16.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <form method ="post">
+        Ingresa tu número secreto:<input type="text" name="number" id="number" />
+        <input type="button" name="submit" id="submit" onclick="getaction()" value="go"/>
+        <p id="demo"> </p>
+        
+        <div id="options12" style="display:none;">
+            <input type='radio' name='radio' onclick='myfunction(this.value)' value='1'/>Saldo
+            <input type='radio' name='radio' onclick='myfunction(this.value)' value='2'/>Retiro
+            <input type='radio' name='radio' onclick='myfunction(this.value)' value='3'/>Prestamo
+        </div>
+        <p id="demo1",></p>
+        
+        <div id="display" style="display:none;">
+            <label>Ingresa el monto de retiro:</label>
+            <input type="text" name="amount1" id="amount1" value=""/>
+            <input type="submit" name="submit1" value="submit" onclick="getamount()"/>
+        </div>
+        
+        <div id="display1" style="display:none;">
+            <label>Selecciona la cantidad de prestamo:</label>
+            <select id="myselect1">
+            <option value="10000">10000</option>
+            <option value ="20000">20000</option>
+            <option value ="50000">50000</option>
+            </select>
+        <input type="submit" name="submit2" value="submit" onclick="getamount1()">
+        </div>
+        </form>
+</body>
+</html>
